@@ -1,5 +1,5 @@
 " Use the Solarized Dark theme
-set background=dark
+set background=light
 colorscheme solarized
 let g:solarized_termtrans=1
 
@@ -41,13 +41,19 @@ set modelines=4
 set exrc
 set secure
 " Enable line numbers
-set number
+"set number
 " Enable syntax highlighting
 syntax on
 " Highlight current line
 set cursorline
-" Make tabs as wide as two spaces
-set tabstop=2
+" four spaces indentation
+set shiftwidth=4
+" Make tabs as wide as four spaces
+set tabstop=4
+" Spaces instead of tabs
+set expandtab
+" Always  set auto indenting on
+set autoindent
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
@@ -59,8 +65,10 @@ set ignorecase
 set incsearch
 " Always show status line
 set laststatus=2
-" Enable mouse in all modes
-set mouse=a
+"" Enable mouse in NO modes
+set mouse=
+" select when using the mouse
+set selectmode=mouse
 " Disable error bells
 set noerrorbells
 " Don’t reset cursor to start of line when moving around.
@@ -75,11 +83,6 @@ set showmode
 set title
 " Show the (partial) command as it’s being typed
 set showcmd
-" Use relative line numbers
-if exists("&relativenumber")
-	set relativenumber
-	au BufReadPost * set relativenumber
-endif
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 

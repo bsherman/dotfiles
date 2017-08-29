@@ -32,3 +32,24 @@ export MANPAGER='less -X';
 # Avoid issues with `gpg` as installed via Homebrew.
 # https://stackoverflow.com/a/42265848/96656
 export GPG_TTY=$(tty);
+
+export M2_REPOSITORY="~/.m2/repository";
+export MAVEN_REPOSITORY="$M2_REPOSITORY";
+export MAVEN_OPTS="-Xmx1024m -Xms64m -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -Dsurefire.useFile=false";
+export ANT_OPTS="-Xmx1024m -Xms64m -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -Dsurefire.useFile=false";
+
+#export DISPLAY=:0.0;
+
+#
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+
+if [ -d "/Applications/Postgres.app/Contents/Versions/latest" ]; then
+    export PG_HOME="/Applications/Postgres.app/Contents/Versions/latest";
+elif [ -d "/Library/PostgreSQL" ]; then
+    export PG_HOME="/Library/PostgreSQL";
+    export PGUSER=postgres;
+fi
+if [ -n "$PG_HOME" ]; then
+    #export PAGER=less;
+    export PATH=$PG_HOME/bin:$PATH;
+fi
