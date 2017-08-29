@@ -44,7 +44,7 @@ set modelines=4
 set exrc
 set secure
 " Enable line numbers
-"set number
+set number
 " Enable syntax highlighting
 syntax on
 " Highlight current line
@@ -68,10 +68,8 @@ set ignorecase
 set incsearch
 " Always show status line
 set laststatus=2
-"" Enable mouse in NO modes
-set mouse=
-" select when using the mouse
-set selectmode=mouse
+"" Enable mouse in all modes (use yank to copy to system)
+set mouse=a
 " Disable error bells
 set noerrorbells
 " Don’t reset cursor to start of line when moving around.
@@ -86,6 +84,11 @@ set showmode
 set title
 " Show the (partial) command as it’s being typed
 set showcmd
+" Use relative line numbers
+if exists("&relativenumber")
+	set relativenumber
+	au BufReadPost * set relativenumber
+endif
 " Start scrolling three lines before the horizontal window border
 set scrolloff=3
 
