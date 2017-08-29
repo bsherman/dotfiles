@@ -38,6 +38,16 @@ export MAVEN_REPOSITORY="$M2_REPOSITORY";
 export MAVEN_OPTS="-Xmx1024m -Xms64m -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -Dsurefire.useFile=false";
 export ANT_OPTS="-Xmx1024m -Xms64m -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -Dsurefire.useFile=false";
 
+JAVA_VERSION=1.8
+export JAVA_HOME=$(/usr/libexec/java_home -v $JAVA_VERSION*)
+#alias setjdk16='export JAVA_HOME=$(/usr/libexec/java_home -v 1.6*)'
+#alias setjdk17='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7*)'
+#alias setjdk18='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8*)'
+
+if [ -n "$JAVA_HOME" ]; then
+    export PATH=$JAVA_HOME/bin:$PATH
+fi
+
 #export DISPLAY=:0.0;
 
 #
