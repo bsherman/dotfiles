@@ -112,7 +112,7 @@ brew cask install docker
 brew cask install intellij-idea
 brew cask install visualvm
 brew cask install rambox
-brew cask install spectacle
+brew cask install sizeup
 
 
 # Remove outdated versions from the cellar.
