@@ -102,6 +102,8 @@ brew install kubectl
 brew install python3
 brew install pyenv-virtualenv
 brew install htop
+brew install pstree
+brew install pwgen
 
 #
 brew cask install iterm2
@@ -113,6 +115,9 @@ brew cask install intellij-idea
 brew cask install visualvm
 brew cask install rambox
 brew cask install sizeup
+brew cask install etcher 
+brew cask install sourcetree
+brew cask install skype
 
 
 # Remove outdated versions from the cellar.
