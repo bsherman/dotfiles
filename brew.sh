@@ -113,6 +113,7 @@ brew cask install postgres
 brew cask install docker
 brew cask install intellij-idea
 brew cask install visualvm
+brew cask install postman
 brew cask install rambox
 brew cask install sizeup
 brew cask install etcher 
