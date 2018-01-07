@@ -39,10 +39,12 @@ export MAVEN_OPTS="-Xmx1024m -Xms64m -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -D
 export ANT_OPTS="-Xmx1024m -Xms64m -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -Dsurefire.useFile=false";
 
 JAVA_VERSION=1.8
+#JAVA_VERSION=9.0
 export JAVA_HOME=$(/usr/libexec/java_home -v $JAVA_VERSION*)
 #alias setjdk16='export JAVA_HOME=$(/usr/libexec/java_home -v 1.6*)'
 #alias setjdk17='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7*)'
 #alias setjdk18='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8*)'
+#alias setjdk9-'export JAVA_HOME=$(/usr/libexec/java_home -v 9.0*)'
 
 if [ -n "$JAVA_HOME" ]; then
     export PATH=$JAVA_HOME/bin:$PATH

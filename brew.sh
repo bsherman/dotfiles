@@ -8,6 +8,8 @@ brew update
 # Upgrade any already-installed formulae.
 brew upgrade
 
+brew tap caskroom/versions
+
 # Install GNU core utilities (those that come with macOS are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
 brew install coreutils
@@ -104,14 +106,19 @@ brew install pyenv-virtualenv
 brew install htop
 brew install pstree
 brew install pwgen
+#
+brew install exiftool
+brew install tinc
 
 #
 brew cask install iterm2
+brew cask install java8
 brew cask install java
 brew cask install chromium
 brew cask install postgres
 brew cask install docker
-brew cask install intellij-idea
+brew cask install intellij-idea-ce
+#brew cask install intellij-idea-
 brew cask install visualvm
 brew cask install postman
 brew cask install rambox
@@ -119,6 +126,14 @@ brew cask install sizeup
 brew cask install etcher 
 brew cask install sourcetree
 brew cask install skype
+brew cask install sonos
+brew cask install authy
+brew cask install fantastical
+brew cask install firefox
+brew cask install moneydance
+brew cask install macvim
+brew cask install lyn
+brew cask install gnucash
 
 
 # Remove outdated versions from the cellar.
