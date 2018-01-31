@@ -99,7 +99,6 @@ brew install zopfli
 brew install groovy
 brew install ant
 brew install maven
-brew install awscli
 brew install kubectl 
 brew install python3
 brew install pyenv-virtualenv
@@ -117,8 +116,6 @@ brew cask install java
 brew cask install chromium
 brew cask install postgres
 brew cask install docker
-brew cask install intellij-idea-ce
-#brew cask install intellij-idea-
 brew cask install visualvm
 brew cask install postman
 brew cask install rambox
@@ -135,6 +132,22 @@ brew cask install macvim
 brew cask install lyn
 brew cask install gnucash
 
+
+# stuff for cloud dev
+brew install awscli
+brew cask install chefdk
+chef gem install test-kitchen
+chef gem install kitchen-ec2
+chef gem install rake
+chef gem install inspec
+chef gem install kitchen-inspec
+chef gem install kitchen-sync
+chef gem install berkshelf
+chef gem install awspec
+brew install terraform
+brew install packer
+brew install jq
+brew cask install tunnelblick
 
 # Remove outdated versions from the cellar.
 brew cleanup
