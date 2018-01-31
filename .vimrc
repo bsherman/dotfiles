@@ -3,7 +3,7 @@ if !has("gui_running")
     let g:solarized_termtrans=1
     let g:solarized_termcolors=256
 endif
-set background=light
+set background=dark
 colorscheme solarized
 
 " Make Vim more useful
