@@ -148,6 +148,7 @@ brew install terraform
 brew install packer
 brew install jq
 brew cask install tunnelblick
+brew install go
 
 # Remove outdated versions from the cellar.
 brew cleanup

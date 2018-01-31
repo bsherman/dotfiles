@@ -52,6 +52,11 @@ fi
 
 CHEF_RUBY_GEM="$HOME/.chefdk/gem/ruby/2.4.0/bin"
 export PATH="$CHEF_RUBY_GEM:$PATH"
+
+GOROOT="/usr/local/opt/go"
+GOPATH="${GOROOT}/libexec/bin"
+export PATH="${GOPATH}:$PATH"
+
 #
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 

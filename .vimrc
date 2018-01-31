@@ -1,3 +1,5 @@
+execute pathogen#infect()
+
 " Use the Solarized Dark theme
 if !has("gui_running")
     let g:solarized_termtrans=1
