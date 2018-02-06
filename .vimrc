@@ -1,7 +1,12 @@
+execute pathogen#infect()
+
 " Use the Solarized Dark theme
+if !has("gui_running")
+    let g:solarized_termtrans=1
+    let g:solarized_termcolors=256
+endif
 set background=dark
 colorscheme solarized
-let g:solarized_termtrans=1
 
 " Make Vim more useful
 set nocompatible
@@ -46,8 +51,14 @@ set number
 syntax on
 " Highlight current line
 set cursorline
-" Make tabs as wide as two spaces
-set tabstop=2
+" four spaces indentation
+set shiftwidth=4
+" Make tabs as wide as four spaces
+set tabstop=4
+" Spaces instead of tabs
+set expandtab
+" Always  set auto indenting on
+set autoindent
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set list
@@ -59,7 +70,7 @@ set ignorecase
 set incsearch
 " Always show status line
 set laststatus=2
-" Enable mouse in all modes
+"" Enable mouse in all modes (use yank to copy to system)
 set mouse=a
 " Disable error bells
 set noerrorbells

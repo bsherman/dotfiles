@@ -78,6 +78,16 @@
 			git commit --amend -m \"$(git log -1 --pretty=%B)\n\nCloses #$1.\"; \
 		fi \
 	}; f"
+	
+	# Collection of old Aliases
+	hist = log --pretty=format:\\\"%h %ad | %s%d [%an]\\\" --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+	logstat = log --stat
+	logsvn = log --name-status
+	logtree = log --graph --pretty=oneline --abbrev-commit
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
 
 [apply]
 
@@ -89,6 +99,9 @@
 	# Use custom `.gitignore` and `.gitattributes`
 	excludesfile = ~/.gitignore
 	attributesfile = ~/.gitattributes
+
+	# fix CRLF when i'm the one introducing it
+	autocrlf = input
 
 	# Treat spaces before tabs and all kinds of trailing whitespace as an error
 	# [default] trailing-space: looks for spaces at the end of a line
@@ -135,7 +148,7 @@
 [commit]
 
 	# https://help.github.com/articles/signing-commits-using-gpg/
-	gpgsign = true
+	gpgsign = false
 
 [diff]
 

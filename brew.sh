@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bash -x
 
 # Install command-line tools using Homebrew.
 
@@ -7,6 +7,8 @@ brew update
 
 # Upgrade any already-installed formulae.
 brew upgrade
+
+brew tap caskroom/versions
 
 # Install GNU core utilities (those that come with macOS are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
@@ -41,7 +43,8 @@ brew install vim --with-override-system-vi
 brew install grep
 brew install openssh
 brew install screen
-brew install homebrew/php/php56 --with-gmp
+brew install tmux 
+#brew install homebrew/php/php56 --with-gmp
 
 # Install font tools.
 brew tap bramstein/webfonttools
@@ -50,30 +53,30 @@ brew install sfnt2woff-zopfli
 brew install woff2
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
-brew install aircrack-ng
-brew install bfg
-brew install binutils
-brew install binwalk
-brew install cifer
-brew install dex2jar
-brew install dns2tcp
-brew install fcrackzip
-brew install foremost
-brew install hashpump
-brew install hydra
-brew install john
-brew install knock
-brew install netpbm
+#brew install aircrack-ng
+#brew install bfg
+#brew install binutils
+#brew install binwalk
+#brew install cifer
+#brew install dex2jar
+#brew install dns2tcp
+#brew install fcrackzip
+#brew install foremost
+#brew install hashpump
+#brew install hydra
+#brew install john
+#brew install knock
+#brew install netpbm
 brew install nmap
-brew install pngcheck
+#brew install pngcheck
 brew install socat
-brew install sqlmap
-brew install tcpflow
-brew install tcpreplay
-brew install tcptrace
-brew install ucspi-tcp # `tcpserver` etc.
-brew install xpdf
-brew install xz
+#brew install sqlmap
+#brew install tcpflow
+#brew install tcpreplay
+#brew install tcptrace
+#brew install ucspi-tcp # `tcpserver` etc.
+#brew install xpdf
+#brew install xz
 
 # Install other useful binaries.
 brew install ack
@@ -92,6 +95,61 @@ brew install ssh-copy-id
 brew install tree
 brew install vbindiff
 brew install zopfli
+
+# Install stuff for dev
+brew install groovy
+brew install ant
+brew install maven
+brew install kubectl 
+brew install python3
+brew install pyenv-virtualenv
+brew install htop
+brew install pstree
+brew install pwgen
+#
+brew install exiftool
+brew install tinc
+
+#
+brew cask install iterm2
+brew cask install java8
+brew cask install java
+brew cask install chromium
+brew cask install postgres
+brew cask install docker
+brew cask install visualvm
+brew cask install postman
+brew cask install rambox
+brew cask install sizeup
+brew cask install etcher 
+brew cask install sourcetree
+brew cask install skype
+brew cask install sonos
+brew cask install authy
+brew cask install fantastical
+brew cask install firefox
+brew cask install moneydance
+brew cask install macvim
+brew cask install lyn
+brew cask install gnucash
+
+
+# stuff for cloud dev
+brew install awscli
+brew cask install chefdk
+chef gem install test-kitchen
+chef gem install kitchen-ec2
+chef gem install rake
+chef gem install inspec
+chef gem install kitchen-inspec
+chef gem install kitchen-sync
+chef gem install berkshelf
+chef gem install awspec
+brew install terraform
+brew install packer
+brew install jq
+brew cask install tunnelblick
+brew install go
 
 # Remove outdated versions from the cellar.
 brew cleanup

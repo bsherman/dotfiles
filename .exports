@@ -32,3 +32,41 @@ export MANPAGER='less -X';
 # Avoid issues with `gpg` as installed via Homebrew.
 # https://stackoverflow.com/a/42265848/96656
 export GPG_TTY=$(tty);
+
+export M2_REPOSITORY="~/.m2/repository";
+export MAVEN_REPOSITORY="$M2_REPOSITORY";
+export MAVEN_OPTS="-Xmx1024m -Xms64m -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -Dsurefire.useFile=false";
+export ANT_OPTS="-Xmx1024m -Xms64m -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -Dsurefire.useFile=false";
+
+JAVA_VERSION=1.8
+#JAVA_VERSION=9.0
+export JAVA_HOME=$(/usr/libexec/java_home -v $JAVA_VERSION*)
+#alias setjdk16='export JAVA_HOME=$(/usr/libexec/java_home -v 1.6*)'
+#alias setjdk17='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7*)'
+#alias setjdk18='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8*)'
+#alias setjdk9-'export JAVA_HOME=$(/usr/libexec/java_home -v 9.0*)'
+
+if [ -n "$JAVA_HOME" ]; then
+    export PATH=$JAVA_HOME/bin:$PATH
+fi
+
+CHEF_RUBY_GEM="$HOME/.chefdk/gem/ruby/2.4.0/bin"
+export PATH="$CHEF_RUBY_GEM:$PATH"
+
+GOROOT="/usr/local/opt/go"
+GOPATH="${GOROOT}/libexec/bin"
+export PATH="${GOPATH}:$PATH"
+
+#
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+
+if [ -d "/Applications/Postgres.app/Contents/Versions/latest" ]; then
+    export PG_HOME="/Applications/Postgres.app/Contents/Versions/latest";
+elif [ -d "/Library/PostgreSQL" ]; then
+    export PG_HOME="/Library/PostgreSQL";
+    export PGUSER=postgres;
+fi
+if [ -n "$PG_HOME" ]; then
+    #export PAGER=less;
+    export PATH=$PG_HOME/bin:$PATH;
+fi
