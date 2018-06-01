@@ -33,6 +33,12 @@ export MANPAGER='less -X';
 # https://stackoverflow.com/a/42265848/96656
 export GPG_TTY=$(tty);
 
+
+export NVM_DIR="$HOME/.nvm"
+if [ -d /usr/local/opt/nvm/ ]; then
+    . "/usr/local/opt/nvm/nvm.sh"
+fi
+
 export M2_REPOSITORY="~/.m2/repository";
 export MAVEN_REPOSITORY="$M2_REPOSITORY";
 export MAVEN_OPTS="-Xmx1024m -Xms64m -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -Dsurefire.useFile=false";
@@ -53,8 +59,8 @@ fi
 CHEF_RUBY_GEM="$HOME/.chefdk/gem/ruby/2.4.0/bin"
 export PATH="$CHEF_RUBY_GEM:$PATH"
 
-GOROOT="/usr/local/opt/go"
-GOPATH="${HOME}/code/go"
+GOROOT="/usr/local/opt/go/libexec/"
+export GOPATH="${HOME}/code/go"
 export PATH="${GOPATH}/bin:${GOROOT}/bin:$PATH"
 
 #
