@@ -81,8 +81,8 @@ brew install socat
 # Install other useful binaries.
 brew install ack
 #brew install exiv2
-brew install git
-brew install git-lfs
+#brew install git
+#brew install git-lfs
 brew install imagemagick --with-webp
 brew install lua
 brew install lynx
@@ -150,6 +150,11 @@ brew install packer
 brew install jq
 brew cask install tunnelblick
 brew install go
+
+# aws
+brew tap fullscreen/tap
+brew install aws-rotate-key
+
 
 # Remove outdated versions from the cellar.
 brew cleanup
