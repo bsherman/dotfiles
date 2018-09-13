@@ -18,3 +18,6 @@ ln -s `pyenv which flake8` ~/bin/flake8  # Assumes that $HOME/bin is in $PATH
 pyenv which python  # Note the path
 PYNVPATH=`pyenv which python`
 echo "let g:python3_host_prog = '$PYNVPATH'" >> ~/.config/nvim/init.vim
+
+# instlaling Pipenv
+pip install --user --upgrade pipenv

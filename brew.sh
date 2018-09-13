@@ -121,6 +121,7 @@ brew install bats
 brew install go
 brew install rustup-init
 brew install awscli
+brew install jq
 #brew cask install chefdk
 #chef gem install test-kitchen
 #chef gem install kitchen-ec2
@@ -131,7 +132,6 @@ brew install awscli
 #chef gem install berkshelf
 #chef gem install awspec
 #brew install packer
-#brew install jq
 
 #terraform
 #brew install terraform
