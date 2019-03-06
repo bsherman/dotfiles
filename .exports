@@ -34,27 +34,22 @@ export MANPAGER='less -X';
 export GPG_TTY=$(tty);
 
 
-export NVM_DIR="$HOME/.nvm"
-if [ -d /usr/local/opt/nvm/ ]; then
-    . "/usr/local/opt/nvm/nvm.sh"
-fi
-
 export M2_REPOSITORY="~/.m2/repository";
 export MAVEN_REPOSITORY="$M2_REPOSITORY";
 export MAVEN_OPTS="-Xmx1024m -Xms64m -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -Dsurefire.useFile=false";
 export ANT_OPTS="-Xmx1024m -Xms64m -XX:+UseConcMarkSweepGC -XX:+UseParNewGC -Dsurefire.useFile=false";
 
-JAVA_VERSION=1.8
+#JAVA_VERSION=1.8
 #JAVA_VERSION=9.0
-export JAVA_HOME=$(/usr/libexec/java_home -v $JAVA_VERSION*)
+#export JAVA_HOME=$(/usr/libexec/java_home -v $JAVA_VERSION*)
 #alias setjdk16='export JAVA_HOME=$(/usr/libexec/java_home -v 1.6*)'
 #alias setjdk17='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7*)'
 #alias setjdk18='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8*)'
-#alias setjdk9-'export JAVA_HOME=$(/usr/libexec/java_home -v 9.0*)'
+#alias setjdk9='export JAVA_HOME=$(/usr/libexec/java_home -v 9.0*)'
 
-if [ -n "$JAVA_HOME" ]; then
-    export PATH=$JAVA_HOME/bin:$PATH
-fi
+#if [ -n "$JAVA_HOME" ]; then
+#    export PATH=$JAVA_HOME/bin:$PATH
+#fi
 
 CHEF_RUBY_GEM="$HOME/.chefdk/gem/ruby/2.4.0/bin"
 export PATH="$CHEF_RUBY_GEM:$PATH"
